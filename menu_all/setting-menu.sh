@@ -137,12 +137,10 @@ echo -e "\033[1;33mChange-Port\033[0m :
 
 [\033[0;32m08\033[0m] • Change Port Stunnel4
 [\033[0;32m09\033[0m] • Change Port OpenVPN
-[\033[0;32m10\033[0m] • Change Port Wireguard
 [\033[0;32m11\033[0m] • Change Port Vmess
 [\033[0;32m12\033[0m] • Change Port Trojan
 [\033[0;32m13\033[0m] • Change Port Trojan-GO
 [\033[0;32m14\033[0m] • Change Port Squid
-[\033[0;32m15\033[0m] • Change Port SSTP
 [\033[0;32m16\033[0m] • Change Port SHDO WS
 [\033[0;32m17\033[0m] • Change Port SHSSL WS
 [\033[0;32m18\033[0m] • Change Port OHP
