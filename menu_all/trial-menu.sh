@@ -68,15 +68,9 @@ echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━�
 echo -e "\E[44;1;39m             ⇱ TRIAL MENU GENERATOR ⇲             \E[0m"
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "\033[1;37mNB: Trial account will not logged into create log user\033[0m
-\033[1;32mTrial-Generator\033[0m :
+\033[1;32mTrial-Generator ( Perhatikan Number Baik² )\033[0m :
 
 [\033[0;32m01\033[0m] • Generate Trial SSH & OpenVPN
-[\033[0;32m02\033[0m] • Generate Trial Wireguard
-[\033[0;32m03\033[0m] • Generate Trial L2TP
-[\033[0;32m04\033[0m] • Generate Trial PPTP
-[\033[0;32m05\033[0m] • Generate Trial SSTP
-[\033[0;32m06\033[0m] • Generate Trial Shadowsocks-R
-[\033[0;32m07\033[0m] • Generate Trial Shadowsocks
 [\033[0;32m08\033[0m] • Generate Trial Vmess
 [\033[0;32m09\033[0m] • Generate Trial VLESS
 [\033[0;32m10\033[0m] • Generate Trial Trojan-GFW
