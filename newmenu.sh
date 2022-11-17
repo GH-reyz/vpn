@@ -78,7 +78,7 @@ chck_b(){
 chck_b
 clear
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "\E[40;1;37m|              • SCRIPT VPS MENU •               |\E[0m"
+echo -e "\E[40;1;37m|              • SCRIPT VPS INFO •               |\E[0m"
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 uphours=`uptime -p | awk '{print $2,$3}' | cut -d , -f1`
 upminutes=`uptime -p | awk '{print $4,$5}' | cut -d , -f1`
@@ -95,14 +95,12 @@ echo -e "Use Core        :  $rekk"
 echo -e "Current Domain  :  $(cat /etc/$bec/domain)"
 echo -e "IP-VPS          :  $(cat /etc/myipvps)"
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "\E[40;1;37m|              • SCRIPT VPS INFO •               |\E[0m"
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "
  [\033[1;36m01\033[0m] • SSH & OVPN
  [\033[1;36m02\033[0m] • $rekk : VMess / VLess
  [\033[1;36m03\033[0m] • TROJAN-GFW & GO
- [\033[1;36m04\033[0m] • WIREGUARD
- [\033[1;36m05\033[0m] • SSTP
- [\033[1;36m06\033[0m] • L2TP / PPTP
- [\033[1;36m07\033[0m] • SHADOWSOCKS obfs/ssr
 
  [\033[1;36m55\033[0m] • Trial Generator
  [\033[1;36m66\033[0m] • Logs User Created
