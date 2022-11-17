@@ -382,6 +382,7 @@ wget -q -O /usr/bin/hapus "https://raw.githubusercontent.com/GH-reyz/vpn/main/ss
 wget -q -O /usr/bin/member "https://raw.githubusercontent.com/GH-reyz/vpn/main/ssh/member.sh" && chmod +x /usr/bin/member
 wget -q -O /usr/bin/delete "https://raw.githubusercontent.com/GH-reyz/vpn/main/ssh/delete.sh" && chmod +x /usr/bin/delete
 wget -q -O /usr/bin/cek "https://raw.githubusercontent.com/GH-reyz/vpn/main/ssh/cek.sh" && chmod +x /usr/bin/cek
+wget -q -O /usr/bin/vpn "https://raw.githubusercontent.com/GH-reyz/vpn/main/ssh/vpn.sh" && chmod +x /usr/bin/vpn
 wget -q -O /usr/bin/restart "https://raw.githubusercontent.com/GH-reyz/vpn/main/ssh/restart.sh" && chmod +x /usr/bin/restart
 wget -q -O /usr/bin/renew "https://raw.githubusercontent.com/GH-reyz/vpn/main/ssh/renew.sh" && chmod +x /usr/bin/renew
 wget -q -O /usr/bin/autokill "https://raw.githubusercontent.com/GH-reyz/vpn/main/ssh/autokill.sh" && chmod +x /usr/bin/autokill
