@@ -100,13 +100,13 @@ echo -e "\033[1;35m━━━━━━━━━━━━━━━━━━━━�
 echo -e " [\033[1;32m01\033[0m] • SSH & OVPN
  [\033[1;32m02\033[0m] • $rekk : VMess / VLess 
  [\033[1;32m03\033[0m] • TROJAN-GFW & GO
- [\033[1;36m55\033[0m] • Trial Config
- [\033[1;36m66\033[0m] • Logs User Created 
- [\033[1;36m77\033[0m] • VPS Setting 
- [\033[1;36m88\033[0m] • MultiLogin Menu 
- [\033[1;36m99\033[0m] • VPS Information 
- [\033[1;31m100\033[0m] • System / Admin 
- [\033[1;31m700\033[0m] • Bot Panel $sts"
+ [\033[1;36m04\033[0m] • Trial Config
+ [\033[1;36m05\033[0m] • Logs User Created 
+ [\033[1;36m06\033[0m] • VPS Setting 
+ [\033[1;36m07\033[0m] • MultiLogin Menu 
+ [\033[1;36m08\033[0m] • VPS Information 
+ [\033[1;31m09\033[0m] • System / Admin 
+ [\033[1;31m10\033[0m] • Bot Panel $sts"
 if [[ $(cat /opt/.ver) = $serverV ]] > /dev/null 2>&1; then
 echo -ne
 else
@@ -142,29 +142,21 @@ if [[ $(cat /opt/.ver) = $serverV ]] > /dev/null 2>&1; then
     elif [[ $x -eq 3 ]]; then
        trojan-menu
     elif [[ $x -eq 4 ]]; then
-       wg-menu
-    elif [[ $x -eq 5 ]]; then
-       sstp-menu
-    elif [[ $x -eq 6 ]]; then
-       ipsec-menu
-    elif [[ $x -eq 7 ]]; then
-       ss-menu
-    elif [[ $x -eq 55 ]]; then
        trial-menu
-    elif [[ $x -eq 66 ]]; then
+    elif [[ $x -eq 5 ]]; then
        clear
        cat /etc/log-create-user.log
        read -n 1 -s -r -p "Press any key to back on menu"
        menu
-    elif [[ $x -eq 77 ]]; then
+    elif [[ $x -eq 6 ]]; then
        setting-menu
-    elif [[ $x -eq 88 ]]; then
+    elif [[ $x -eq 7 ]]; then
        autokill-menu
-    elif [[ $x -eq 99 ]]; then
+    elif [[ $x -eq 8 ]]; then
        info-menu
-    elif [[ $x -eq 100 ]]; then
+    elif [[ $x -eq 9 ]]; then
        system-menu
-    elif [[ $x -eq 700 ]]; then
+    elif [[ $x -eq 10 ]]; then
        installbot
     else
        menu
