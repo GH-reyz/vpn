@@ -115,7 +115,6 @@ else
 echo -e "[\033[1;35m999\033[0m] • \033[0;31mUpdate Available ! Go choice 999 to update\033[0m"
 echo ""
 fi
-echo ""
 echo -e "\033[1;35m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 if [[ $(cat /opt/.ver) = $serverV ]] > /dev/null 2>&1; then
 echo -e "Client Name   : $Name"
