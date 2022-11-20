@@ -97,20 +97,16 @@ echo -e "IP-VPS          :  $(cat /etc/myipvps)"
 echo -e "\033[1;35m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "\E[0;47;30m|              • SCRIPT VPS MENU •               |\E[0m"
 echo -e "\033[1;35m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "
- [\033[1;32m01\033[0m] • SSH & OVPN
+echo -e " [\033[1;32m01\033[0m] • SSH & OVPN
  [\033[1;32m02\033[0m] • $rekk : VMess / VLess 
  [\033[1;32m03\033[0m] • TROJAN-GFW & GO
-
  [\033[1;36m55\033[0m] • Trial Config
  [\033[1;36m66\033[0m] • Logs User Created 
  [\033[1;36m77\033[0m] • VPS Setting 
  [\033[1;36m88\033[0m] • MultiLogin Menu 
  [\033[1;36m99\033[0m] • VPS Information 
-
  [\033[1;31m100\033[0m] • System / Admin 
- [\033[1;31m700\033[0m] • Bot Panel $sts
-"
+ [\033[1;31m700\033[0m] • Bot Panel $sts"
 if [[ $(cat /opt/.ver) = $serverV ]] > /dev/null 2>&1; then
 echo -ne
 else
