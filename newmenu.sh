@@ -100,13 +100,15 @@ echo -e "\033[1;35m━━━━━━━━━━━━━━━━━━━━�
 echo -e " [\033[1;32m01\033[0m] • SSH & OVPN
  [\033[1;32m02\033[0m] • $rekk : VMess / VLess 
  [\033[1;32m03\033[0m] • TROJAN-GFW & GO
- [\033[1;36m04\033[0m] • Trial Config
+ [\033[1;32m04\033[0m] • Trial Config
  [\033[1;36m05\033[0m] • Logs User Created 
  [\033[1;36m06\033[0m] • VPS Setting 
  [\033[1;36m07\033[0m] • MultiLogin Menu 
  [\033[1;36m08\033[0m] • VPS Information 
  [\033[1;31m09\033[0m] • System / Admin 
- [\033[1;31m10\033[0m] • Bot Panel $sts"
+ [\033[1;31m10\033[0m] • Bot Panel $sts
+ [\033[1;31m11\033[0m] • Reboot Server
+ [\033[1;31m12\033[0m] • Change Password VPS"
 if [[ $(cat /opt/.ver) = $serverV ]] > /dev/null 2>&1; then
 echo -ne
 else
@@ -158,6 +160,10 @@ if [[ $(cat /opt/.ver) = $serverV ]] > /dev/null 2>&1; then
        system-menu
     elif [[ $x -eq 10 ]]; then
        installbot
+    elif [[ $x -eq 11 ]]; then
+       reboot
+    elif [[ $x -eq 12 ]]; then
+       passwd
     else
        menu
     fi
