@@ -102,14 +102,14 @@ echo -e "
  [\033[1;32m02\033[0m] • $rekk : VMess / VLess 
  [\033[1;32m03\033[0m] • TROJAN-GFW & GO
 
- [\033[1;32m55\033[0m] • Trial Generator
- [\033[1;32m66\033[0m] • Logs User Created
- [\033[1;32m77\033[0m] • VPS Setting [ Menu ]
- [\033[1;32m88\033[0m] • Autokill Multi-login [ Menu ]
- [\033[1;32m99\033[0m] • ALL Information VPS[ Menu ]
+ [\033[1;32m55\033[0m] • Trial Config
+ [\033[1;32m66\033[0m] • Logs User Created 
+ [\033[1;32m77\033[0m] • VPS Setting 
+ [\033[1;32m88\033[0m] • MultiLogin Menu 
+ [\033[1;32m99\033[0m] • VPS Information 
 
- [\033[1;32m100\033[0m] • SYSTEM / Admin [ Menu ]
- [\033[1;32m700\033[0m] • Bot-Panel $sts
+ [\033[1;32m100\033[0m] • System / Admin 
+ [\033[1;32m700\033[0m] • Bot Panel $sts
 "
 if [[ $(cat /opt/.ver) = $serverV ]] > /dev/null 2>&1; then
 echo -ne
@@ -120,7 +120,6 @@ fi
 echo ""
 echo -e "\033[1;35m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 if [[ $(cat /opt/.ver) = $serverV ]] > /dev/null 2>&1; then
-echo -e "Version       :\033[1;32m $(cat /opt/.ver) Latest Version\e[0m"
 echo -e "Client Name   : $Name"
 echo -e "Expiry script : $Exp"
 echo -e "Script By     : Reyz-V4"
