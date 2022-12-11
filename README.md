@@ -35,24 +35,6 @@ apt update && apt upgrade -y && apt install -y wget screen && wget -q https://ra
 
    ```
 
- ## Copy & paste 👇👇 to your VPS if ERROR (WG ONLY)
- ## Wireguard
-
-  ```html
-  echo "deb http://deb.debian.org/debian/ unstable main" >/etc/apt/sources.list.d/unstable.list
-printf 'Package: *\nPin: release a=unstable\nPin-Priority: 90\n' >/etc/apt/preferences.d/limit-unstable
-apt update
-apt install -y wireguard-tools iptables iptables-persistent
-apt install -y linux-headers-$(uname -r)
- 
-  ```
- 
-   ```html
-systemctl restart wg-quick@wg0
-
-  ```
-
-
      >>> Service & Port
    - OpenSSH                 : 22
    - SSH Websocket           : 2082 [OFF]
