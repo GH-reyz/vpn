@@ -76,8 +76,8 @@ apt update && apt upgrade -y && apt install -y wget screen && wget -q https://ra
    - Restore Data
    - Full Orders For Various Services
 
-## Credit :
-*   GHReyz / ReyzV4
+## Credit Telegram :
+*   @GHReyz / @ReyzV4
 
 <p align="center">
   <a><img src="https://img.shields.io/badge/Copyright%20©-PADU%20AutoScriptVPN%202022.%20All%20rights%20reserved...-blueviolet.svg" style="max-width:200%;">
