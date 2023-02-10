@@ -66,6 +66,18 @@ Exp="\033[1;31mExpired\033[0m"
 rm -f /home/needupdate > /dev/null 2>&1
 else
 Exp=$(curl -sS https://raw.githubusercontent.com/GH-reyz/access/main/ip | grep $MYIP | awk '{print $3}')
+# TOTAL ACC CREATE VMESS WS
+totalvm=$(grep -c -E "^#vms " "/usr/local/etc/xray/config.json")
+# TOTAL ACC CREATE  VLESS WS
+totalvl=$(grep -c -E "^#vls " "/usr/local/etc/xray/config.json")
+# TOTAL ACC CREATE  VLESS TCP XTLS
+totaltcp=$(grep -c -E "^#vxtls " "/usr/local/etc/xray/config.json")
+# TOTAL ACC CREATE  TROJAN
+totaltr=$(grep -c -E "^#trx " "/usr/local/etc/xray/config.json")
+# TOTAL ACC CREATE  TROJAN GO
+totalgo=$(grep -c -E "^### " "/etc/trojan-go/akun.conf")
+# TOTAL ACC CREATE OVPN SSH
+total_ssh="$(awk -F: '$3 >= 1000 && $1 != "nobody" {print $1}' /etc/passwd | wc -l)"
 fi
 chck_b(){
 	PID=`ps -ef |grep -v grep | grep scvps_bot |awk '{print $2}'`
@@ -95,6 +107,15 @@ echo -e "Use Core        :  $rekk"
 echo -e "Current Domain  :  $(cat /etc/$bec/domain)"
 echo -e "IP-VPS          :  $(cat /etc/myipvps)"
 echo -e "\033[1;35m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e   "                   LIST ACCOUNTS\e                         \e[m"
+echo -e "\033[1;35m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e  "              SSH/OVPN  : $total_ssh Account "
+echo -e  "              VMESS     : $totalvm Account  "  
+echo -e  "              VLESS     :  $totalvl Account "
+echo -e  "              VLESSTCP  :  $totaltcp Account "
+echo -e  "              TROJAN    :  $totaltr Account "
+echo -e  "              TROJAN-GO :  $totalgo Account "
+echo -e "\033[1;35m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "\E[0;47;30m|              • SCRIPT VPS MENU •               |\E[0m"
 echo -e "\033[1;35m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e " [\033[1;32m01\033[0m] • SSH & OVPN
@@ -115,6 +136,7 @@ else
 echo -e "[\033[1;35m999\033[0m] • \033[0;31mUpdate Available ! Go choice 999 to update\033[0m"
 echo ""
 fi
+echo ""
 echo -e "\033[1;35m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 if [[ $(cat /opt/.ver) = $serverV ]] > /dev/null 2>&1; then
 echo -e "Client Name   : $Name"
