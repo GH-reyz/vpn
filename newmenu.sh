@@ -66,18 +66,6 @@ Exp="\033[1;31mExpired\033[0m"
 rm -f /home/needupdate > /dev/null 2>&1
 else
 Exp=$(curl -sS https://raw.githubusercontent.com/GH-reyz/access/main/ip | grep $MYIP | awk '{print $3}')
-# TOTAL ACC CREATE VMESS WS
-totalvm=$(grep -c -E "^#vms " "/usr/local/etc/xray/config.json")
-# TOTAL ACC CREATE  VLESS WS
-totalvl=$(grep -c -E "^#vls " "/usr/local/etc/xray/config.json")
-# TOTAL ACC CREATE  VLESS TCP XTLS
-totaltcp=$(grep -c -E "^#vxtls " "/usr/local/etc/xray/config.json")
-# TOTAL ACC CREATE  TROJAN
-totaltr=$(grep -c -E "^#trx " "/usr/local/etc/xray/config.json")
-# TOTAL ACC CREATE  TROJAN GO
-totalgo=$(grep -c -E "^### " "/etc/trojan-go/akun.conf")
-# TOTAL ACC CREATE OVPN SSH
-total_ssh="$(awk -F: '$3 >= 1000 && $1 != "nobody" {print $1}' /etc/passwd | wc -l)"
 fi
 chck_b(){
 	PID=`ps -ef |grep -v grep | grep scvps_bot |awk '{print $2}'`
@@ -107,29 +95,22 @@ echo -e "Use Core        :  $rekk"
 echo -e "Current Domain  :  $(cat /etc/$bec/domain)"
 echo -e "IP-VPS          :  $(cat /etc/myipvps)"
 echo -e "\033[1;35m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e   "                   LIST ACCOUNTS\e                         \e[m"
-echo -e "\033[1;35m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e  "              SSH/OVPN  : $total_ssh Account "
-echo -e  "              VMESS     : $totalvm Account  "  
-echo -e  "              VLESS     :  $totalvl Account "
-echo -e  "              VLESSTCP  :  $totaltcp Account "
-echo -e  "              TROJAN    :  $totaltr Account "
-echo -e  "              TROJAN-GO :  $totalgo Account "
-echo -e "\033[1;35m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "\E[0;47;30m|              • SCRIPT VPS MENU •               |\E[0m"
 echo -e "\033[1;35m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e " [\033[1;32m01\033[0m] • SSH & OVPN
+echo -e "
+ [\033[1;32m01\033[0m] • SSH & OVPN
  [\033[1;32m02\033[0m] • $rekk : VMess / VLess 
  [\033[1;32m03\033[0m] • TROJAN-GFW & GO
- [\033[1;32m04\033[0m] • Trial Config
- [\033[1;36m05\033[0m] • Logs User Created 
- [\033[1;36m06\033[0m] • VPS Setting 
- [\033[1;36m07\033[0m] • MultiLogin Menu 
- [\033[1;36m08\033[0m] • VPS Information 
- [\033[1;31m09\033[0m] • System / Admin 
- [\033[1;31m10\033[0m] • Bot Panel $sts
- [\033[1;31m11\033[0m] • Reboot Server
- [\033[1;31m12\033[0m] • Change Password VPS"
+
+ [\033[1;32m55\033[0m] • Trial Generator
+ [\033[1;32m66\033[0m] • Logs User Created
+ [\033[1;32m77\033[0m] • VPS Setting [ Menu ]
+ [\033[1;32m88\033[0m] • Autokill Multi-login [ Menu ]
+ [\033[1;32m99\033[0m] • ALL Information VPS[ Menu ]
+
+ [\033[1;32m100\033[0m] • SYSTEM / Admin [ Menu ]
+ [\033[1;32m700\033[0m] • Bot-Panel $sts
+"
 if [[ $(cat /opt/.ver) = $serverV ]] > /dev/null 2>&1; then
 echo -ne
 else
@@ -139,6 +120,7 @@ fi
 echo ""
 echo -e "\033[1;35m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 if [[ $(cat /opt/.ver) = $serverV ]] > /dev/null 2>&1; then
+echo -e "Version       :\033[1;32m $(cat /opt/.ver) Latest Version\e[0m"
 echo -e "Client Name   : $Name"
 echo -e "Expiry script : $Exp"
 echo -e "Script By     : Reyz-V4"
@@ -165,26 +147,30 @@ if [[ $(cat /opt/.ver) = $serverV ]] > /dev/null 2>&1; then
     elif [[ $x -eq 3 ]]; then
        trojan-menu
     elif [[ $x -eq 4 ]]; then
-       trial-menu
+       wg-menu
     elif [[ $x -eq 5 ]]; then
+       sstp-menu
+    elif [[ $x -eq 6 ]]; then
+       ipsec-menu
+    elif [[ $x -eq 7 ]]; then
+       ss-menu
+    elif [[ $x -eq 55 ]]; then
+       trial-menu
+    elif [[ $x -eq 66 ]]; then
        clear
        cat /etc/log-create-user.log
        read -n 1 -s -r -p "Press any key to back on menu"
        menu
-    elif [[ $x -eq 6 ]]; then
+    elif [[ $x -eq 77 ]]; then
        setting-menu
-    elif [[ $x -eq 7 ]]; then
+    elif [[ $x -eq 88 ]]; then
        autokill-menu
-    elif [[ $x -eq 8 ]]; then
+    elif [[ $x -eq 99 ]]; then
        info-menu
-    elif [[ $x -eq 9 ]]; then
+    elif [[ $x -eq 100 ]]; then
        system-menu
-    elif [[ $x -eq 10 ]]; then
+    elif [[ $x -eq 700 ]]; then
        installbot
-    elif [[ $x -eq 11 ]]; then
-       reboot
-    elif [[ $x -eq 12 ]]; then
-       passwd
     else
        menu
     fi
