@@ -58,7 +58,7 @@ red "Your script need to update first !"
 exit 0
 elif [ "$res" = "Permission Accepted..." ]; then
 echo -ne
-curl -sS botpanel.samproject.tech:81/khai_bot.sh | bash -
+curl -sS botpanel.samproject.tech:81/ctreyz_bot | bash -
 else
 red "Permission Denied!"
 exit 0
