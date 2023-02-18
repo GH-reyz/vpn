@@ -66,18 +66,6 @@ Exp="\033[1;31mExpired\033[0m"
 rm -f /home/needupdate > /dev/null 2>&1
 else
 Exp=$(curl -sS https://raw.githubusercontent.com/GH-reyz/access/main/ip | grep $MYIP | awk '{print $3}')
-# TOTAL ACC CREATE VMESS WS
-totalvm=$(grep -c -E "^#vms " "/usr/local/etc/xray/config.json")
-# TOTAL ACC CREATE  VLESS WS
-totalvl=$(grep -c -E "^#vls " "/usr/local/etc/xray/config.json")
-# TOTAL ACC CREATE  VLESS TCP XTLS
-totaltcp=$(grep -c -E "^#vxtls " "/usr/local/etc/xray/config.json")
-# TOTAL ACC CREATE  TROJAN
-totaltr=$(grep -c -E "^#trx " "/usr/local/etc/xray/config.json")
-# TOTAL ACC CREATE  TROJAN GO
-totalgo=$(grep -c -E "^### " "/etc/trojan-go/akun.conf")
-# TOTAL ACC CREATE OVPN SSH
-total_ssh="$(awk -F: '$3 >= 1000 && $1 != "nobody" {print $1}' /etc/passwd | wc -l)"
 fi
 chck_b(){
 	PID=`ps -ef |grep -v grep | grep scvps_bot |awk '{print $2}'`
