@@ -377,7 +377,6 @@ sudo netfilter-persistent reload >/dev/null 2>&1
 
 # download script
 wget -q -O /usr/bin/usernew "https://raw.githubusercontent.com/GH-reyz/vpn/main/ssh/usernew.sh" && chmod +x /usr/bin/usernew
-wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/GH-reyz/vpn/main/newmenu.sh" && chmod +x /usr/bin/menu
 wget -q -O /usr/bin/trial "https://raw.githubusercontent.com/GH-reyz/vpn/main/ssh/trial.sh" && chmod +x /usr/bin/trial
 wget -q -O /usr/bin/hapus "https://raw.githubusercontent.com/GH-reyz/vpn/main/ssh/hapus.sh" && chmod +x /usr/bin/hapus
 wget -q -O /usr/bin/member "https://raw.githubusercontent.com/GH-reyz/vpn/main/ssh/member.sh" && chmod +x /usr/bin/member
