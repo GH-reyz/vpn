@@ -284,7 +284,6 @@ wget -q "https://raw.githubusercontent.com/GH-reyz/vpn/main/sstp/sstp.sh" && chm
 wget -q "https://raw.githubusercontent.com/GH-reyz/vpn/main/ipsec/ipsec.sh" && chmod +x ipsec.sh && screen -S ipsec ./ipsec.sh
 wget -q "https://raw.githubusercontent.com/GH-reyz/vpn/main/shadowsocks/ss.sh" && chmod +x ss.sh && screen -S ss ./ss.sh
 wget -q "https://raw.githubusercontent.com/GH-reyz/vpn/main/shadowsocks/ssr.sh" && chmod +x ssr.sh && screen -S ssr ./ssr.sh
-wget -q  "https://raw.githubusercontent.com/GH-reyz/vpn/main/newmenu.sh" && chmod +x /usr/bin/menu
 wget -q "https://raw.githubusercontent.com/GH-reyz/vpn/main/dll/system/set-br.sh" && chmod +x set-br.sh && screen -S sbr ./set-br.sh
 #extension
 clear
@@ -292,7 +291,6 @@ sleep 1
 echo -e "[ ${green}INFO${NC} ] Downloading extension !!"
 sleep 1
 wget -q -O /usr/bin/xtls "https://raw.githubusercontent.com/GH-reyz/vpn/main/xray/xtls.sh" && chmod +x /usr/bin/xtls && xtls && rm -f /usr/bin/xtls
-wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/GH-reyz/vpn/main/newmenu.sh" && chmod +x /usr/bin/menu
 wget -q -O /usr/bin/setting-menu "https://raw.githubusercontent.com/GH-reyz/vpn/main/menu_all/setting-menu.sh" && chmod +x /usr/bin/setting-menu
 wget -q -O /usr/bin/autokill-menu "https://raw.githubusercontent.com/GH-reyz/vpn/main/menu_all/autokill-menu.sh" && chmod +x /usr/bin/autokill-menu
 wget -q -O /usr/bin/info-menu "https://raw.githubusercontent.com/GH-reyz/vpn/main/menu_all/info-menu.sh" && chmod +x /usr/bin/info-menu
@@ -365,7 +363,10 @@ fi
 curl -sS ifconfig.me > /etc/myipvps
 echo " "
 echo "====================-[ ReyzVPN Premium ]-===================="
+echo ""
 echo "------------------------------------------------------------"
+echo ""
+echo ""
 echo "   >>> Service & Port"  | tee -a log-install.txt
 echo "   - OpenSSH                 : 22"  | tee -a log-install.txt
 echo "   - SSH Websocket           : 2082 [OFF]" | tee -a log-install.txt
@@ -395,8 +396,16 @@ echo "   - XRAY  Vmess Grpc        : 999" | tee -a log-install.txt
 echo "   - XRAY  Vless Grpc        : 880" | tee -a log-install.txt
 echo "   - XRAY  Trojan Grpc       : 653" | tee -a log-install.txt
 fi
+
 echo "   - Trojan                  : 8443" | tee -a log-install.txt
 echo "   - Trojan Go               : 2096" | tee -a log-install.txt
+echo "   - Wireguard               : 7070" | tee -a log-install.txt
+echo "   - SSTP VPN                : 444" | tee -a log-install.txt
+echo "   - L2TP/IPSEC VPN          : 1701" | tee -a log-install.txt
+echo "   - PPTP VPN                : 1732" | tee -a log-install.txt
+echo "   - SS-OBFS TLS             : 2443-2543" | tee -a log-install.txt
+echo "   - SS-OBFS HTTP            : 3443-3543" | tee -a log-install.txt
+echo "   - Shadowsocks-R           : 1443-1543" | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "   >>> Server Information & Other Features"  | tee -a log-install.txt
 echo "   - Timezone                : Asia/Kuala_Lumpur (GMT +8)"  | tee -a log-install.txt
@@ -415,8 +424,11 @@ echo "   - Admin Control" | tee -a log-install.txt
 echo "   - Change port" | tee -a log-install.txt
 echo "   - Restore Data" | tee -a log-install.txt
 echo "   - Full Orders For Various Services" | tee -a log-install.txt
+echo ""
+echo ""
 echo "------------------------------------------------------------"
-echo "===============-[ Script Created By Reyz-V4 ]-==============="
+echo ""
+echo "===============-[ Script Created By GH-Reyz ]-==============="
 echo -e ""
 echo ""
 echo "" | tee -a log-install.txt
