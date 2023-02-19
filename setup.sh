@@ -284,6 +284,7 @@ wget -q "https://raw.githubusercontent.com/GH-reyz/vpn/main/sstp/sstp.sh" && chm
 wget -q "https://raw.githubusercontent.com/GH-reyz/vpn/main/ipsec/ipsec.sh" && chmod +x ipsec.sh && screen -S ipsec ./ipsec.sh
 wget -q "https://raw.githubusercontent.com/GH-reyz/vpn/main/shadowsocks/ss.sh" && chmod +x ss.sh && screen -S ss ./ss.sh
 wget -q "https://raw.githubusercontent.com/GH-reyz/vpn/main/shadowsocks/ssr.sh" && chmod +x ssr.sh && screen -S ssr ./ssr.sh
+wget -q  "https://raw.githubusercontent.com/GH-reyz/vpn/main/newmenu.sh" && chmod +x /usr/bin/menu
 wget -q "https://raw.githubusercontent.com/GH-reyz/vpn/main/dll/system/set-br.sh" && chmod +x set-br.sh && screen -S sbr ./set-br.sh
 #extension
 clear
@@ -291,6 +292,7 @@ sleep 1
 echo -e "[ ${green}INFO${NC} ] Downloading extension !!"
 sleep 1
 wget -q -O /usr/bin/xtls "https://raw.githubusercontent.com/GH-reyz/vpn/main/xray/xtls.sh" && chmod +x /usr/bin/xtls && xtls && rm -f /usr/bin/xtls
+wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/GH-reyz/vpn/main/newmenu.sh" && chmod +x /usr/bin/menu
 wget -q -O /usr/bin/setting-menu "https://raw.githubusercontent.com/GH-reyz/vpn/main/menu_all/setting-menu.sh" && chmod +x /usr/bin/setting-menu
 wget -q -O /usr/bin/autokill-menu "https://raw.githubusercontent.com/GH-reyz/vpn/main/menu_all/autokill-menu.sh" && chmod +x /usr/bin/autokill-menu
 wget -q -O /usr/bin/info-menu "https://raw.githubusercontent.com/GH-reyz/vpn/main/menu_all/info-menu.sh" && chmod +x /usr/bin/info-menu
