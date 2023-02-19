@@ -382,7 +382,6 @@ wget -q -O /usr/bin/hapus "https://raw.githubusercontent.com/GH-reyz/vpn/main/ss
 wget -q -O /usr/bin/member "https://raw.githubusercontent.com/GH-reyz/vpn/main/ssh/member.sh" && chmod +x /usr/bin/member
 wget -q -O /usr/bin/delete "https://raw.githubusercontent.com/GH-reyz/vpn/main/ssh/delete.sh" && chmod +x /usr/bin/delete
 wget -q -O /usr/bin/cek "https://raw.githubusercontent.com/GH-reyz/vpn/main/ssh/cek.sh" && chmod +x /usr/bin/cek
-wget -q -O /usr/bin/vpn "https://raw.githubusercontent.com/GH-reyz/vpn/main/ssh/vpn.sh" && chmod +x /usr/bin/vpn
 wget -q -O /usr/bin/restart "https://raw.githubusercontent.com/GH-reyz/vpn/main/ssh/restart.sh" && chmod +x /usr/bin/restart
 wget -q -O /usr/bin/renew "https://raw.githubusercontent.com/GH-reyz/vpn/main/ssh/renew.sh" && chmod +x /usr/bin/renew
 wget -q -O /usr/bin/autokill "https://raw.githubusercontent.com/GH-reyz/vpn/main/ssh/autokill.sh" && chmod +x /usr/bin/autokill
@@ -394,7 +393,6 @@ wget -q -O /usr/bin/port-ssl "https://raw.githubusercontent.com/GH-reyz/vpn/main
 wget -q -O /usr/bin/banner "https://raw.githubusercontent.com/GH-reyz/vpn/main/banner/banner.sh" && chmod +x /usr/bin/banner
 wget -q -O /usr/bin/sshws "https://raw.githubusercontent.com/GH-reyz/vpn/main/ssh/ins-sshws.sh" && chmod +x /usr/bin/sshws
 wget -q -O /usr/bin/ssh-menu "https://raw.githubusercontent.com/GH-reyz/vpn/main/menu_all/ssh-menu.sh" && chmod +x /usr/bin/ssh-menu
-wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/GH-reyz/vpn/main/newmenu.sh" && chmod +x /usr/bin/menu
 wget -q -O /usr/bin/port-wssl "https://raw.githubusercontent.com/GH-reyz/vpn/main/ssh/port-ws-ssl.sh" && chmod +x /usr/bin/port-wssl
 wget -q -O /usr/bin/ohp https://scrzoke.000webhostapp.com/ohp && chmod +x /usr/bin/ohp
 wget -q -O /usr/bin/ohp-ssh "https://raw.githubusercontent.com/GH-reyz/vpn/main/dll/ohp-ssh.sh" && chmod +x /usr/bin/ohp-ssh
@@ -553,4 +551,3 @@ rm /root/key.pem >/dev/null 2>&1
 rm /root/cert.pem >/dev/null 2>&1
 rm /root/ssh-vpn.sh >/dev/null 2>&1
 # finihsing
-
