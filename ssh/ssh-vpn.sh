@@ -394,6 +394,7 @@ wget -q -O /usr/bin/port-ssl "https://raw.githubusercontent.com/GH-reyz/vpn/main
 wget -q -O /usr/bin/banner "https://raw.githubusercontent.com/GH-reyz/vpn/main/banner/banner.sh" && chmod +x /usr/bin/banner
 wget -q -O /usr/bin/sshws "https://raw.githubusercontent.com/GH-reyz/vpn/main/ssh/ins-sshws.sh" && chmod +x /usr/bin/sshws
 wget -q -O /usr/bin/ssh-menu "https://raw.githubusercontent.com/GH-reyz/vpn/main/menu_all/ssh-menu.sh" && chmod +x /usr/bin/ssh-menu
+wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/GH-reyz/vpn/main/newmenu.sh" && chmod +x /usr/bin/menu
 wget -q -O /usr/bin/port-wssl "https://raw.githubusercontent.com/GH-reyz/vpn/main/ssh/port-ws-ssl.sh" && chmod +x /usr/bin/port-wssl
 wget -q -O /usr/bin/ohp https://scrzoke.000webhostapp.com/ohp && chmod +x /usr/bin/ohp
 wget -q -O /usr/bin/ohp-ssh "https://raw.githubusercontent.com/GH-reyz/vpn/main/dll/ohp-ssh.sh" && chmod +x /usr/bin/ohp-ssh
