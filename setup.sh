@@ -180,8 +180,8 @@ x="ok"
 while true $x != "ok"
 do
 echo -e "[ ${green}INFO${NC} ] Select core : " 
-echo -e "[ ${yell}*${NC} ] 1. V2RAY"
-echo -e "[ ${yell}*${NC} ] 2. XRAY"
+echo -e "[ ${yell}*${NC} ] 1. V2RAY ( Error ) "
+echo -e "[ ${yell}*${NC} ] 2. XRAY ( Recommend ) "
 echo " =--------------="
 echo -ne "[ ${red}#${NC} ] Choice : "; read x
 case "$x" in
