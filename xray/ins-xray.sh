@@ -237,7 +237,7 @@ cat >/etc/xray/config.json <<END
       }
     },
     {
-      "port": 445,
+      "port": 443,
       "protocol": "vless",
       "settings": {
         "clients": [
@@ -318,7 +318,7 @@ cat >/etc/xray/config.json <<END
       }
     },
     {
-      "port": 8443,
+      "port": 443,
       "protocol": "trojan",
       "settings": {
         "clients": [
@@ -546,7 +546,7 @@ cat >/etc/xray/vmessgrpc.json <<END
     },
     "inbounds": [
         {
-            "port": 999,
+            "port": 80,
             "protocol": "vmess",
             "settings": {
                 "clients": [
@@ -596,7 +596,7 @@ cat >/etc/xray/vlessgrpc.json <<END
     },
     "inbounds": [
         {
-            "port": 880,
+            "port": 443,
             "protocol": "vless",
             "settings": {
                 "clients": [
@@ -646,7 +646,7 @@ cat >/etc/xray/trojangrpc.json <<END
     },
     "inbounds": [
         {
-            "port": 653,
+            "port": 443,
             "protocol": "trojan",
             "settings": {
                 "clients": [
