@@ -180,8 +180,8 @@ x="ok"
 while true $x != "ok"
 do
 echo -e "[ ${green}INFO${NC} ] Select core : " 
-echo -e "[ ${yell}*${NC} ] 1. V2RAY ( Error ) "
-echo -e "[ ${yell}*${NC} ] 2. XRAY ( Recommend ) "
+echo -e "[ ${yell}*${NC} ] 1. V2RAY"
+echo -e "[ ${yell}*${NC} ] 2. XRAY"
 echo " =--------------="
 echo -ne "[ ${red}#${NC} ] Choice : "; read x
 case "$x" in
@@ -379,21 +379,21 @@ echo "   - Badvpn                  : 7100-7900" | tee -a log-install.txt
 echo "   - Nginx                   : 81" | tee -a log-install.txt
 echo "   - VLess TCP XTLS          : 443" | tee -a log-install.txt
 if [ "$coreselect" = "v2ray" ]; then
-echo "   - V2RAY Vmess GRPC        : 80" | tee -a log-install.txt
+echo "   - V2RAY Vmess GRPC        : 2099" | tee -a log-install.txt
 echo "   - V2RAY Vmess TLS         : 435" | tee -a log-install.txt
 echo "   - V2RAY Vmess None TLS    : 95" | tee -a log-install.txt
-echo "   - V2RAY Vless TLS         : 443" | tee -a log-install.txt
+echo "   - V2RAY Vless TLS         : 445" | tee -a log-install.txt
 echo "   - V2RAY Vless None TLS    : 80" | tee -a log-install.txt
 elif [ "$coreselect" = "xray" ]; then
 echo "   - XRAY  Vmess TLS         : 435" | tee -a log-install.txt
 echo "   - XRAY  Vmess None TLS    : 95" | tee -a log-install.txt
-echo "   - XRAY  Vless TLS         : 443" | tee -a log-install.txt
+echo "   - XRAY  Vless TLS         : 445" | tee -a log-install.txt
 echo "   - XRAY  Vless None TLS    : 80" | tee -a log-install.txt
-echo "   - XRAY  Vmess Grpc        : 80" | tee -a log-install.txt
-echo "   - XRAY  Vless Grpc        : 443" | tee -a log-install.txt
-echo "   - XRAY  Trojan Grpc       : 443" | tee -a log-install.txt
+echo "   - XRAY  Vmess Grpc        : 999" | tee -a log-install.txt
+echo "   - XRAY  Vless Grpc        : 880" | tee -a log-install.txt
+echo "   - XRAY  Trojan Grpc       : 653" | tee -a log-install.txt
 fi
-echo "   - Trojan                  : 443" | tee -a log-install.txt
+echo "   - Trojan                  : 8443" | tee -a log-install.txt
 echo "   - Trojan Go               : 2096" | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "   >>> Server Information & Other Features"  | tee -a log-install.txt
