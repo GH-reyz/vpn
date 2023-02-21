@@ -77,14 +77,14 @@ chck_b(){
 }
 chck_b
 clear
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "\E[40;1;37m|              • SCRIPT VPS MENU •               |\E[0m"
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "\033[1;35m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "\E[0;47;30m|              • SCRIPT VPS INFO •               |\E[0m"
+echo -e "\033[1;35m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 uphours=`uptime -p | awk '{print $2,$3}' | cut -d , -f1`
 upminutes=`uptime -p | awk '{print $4,$5}' | cut -d , -f1`
 uptimecek=`uptime -p | awk '{print $6,$7}' | cut -d , -f1`
 cekup=`uptime -p | grep -ow "day"`
-serverV=$( curl -sS https://raw.githubusercontent.com/KhaiVpn767/access/main/versi)
+serverV=$( curl -sS https://raw.githubusercontent.com/GH-reyz/access/main/versi)
 
 if [ "$cekup" = "day" ]; then
 echo -e "System Uptime   :  $uphours $upminutes $uptimecek"
