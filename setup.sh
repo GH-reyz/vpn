@@ -363,10 +363,7 @@ fi
 curl -sS ifconfig.me > /etc/myipvps
 echo " "
 echo "====================-[ ReyzVPN Premium ]-===================="
-echo ""
 echo "------------------------------------------------------------"
-echo ""
-echo ""
 echo "   >>> Service & Port"  | tee -a log-install.txt
 echo "   - OpenSSH                 : 22"  | tee -a log-install.txt
 echo "   - SSH Websocket           : 2082 [OFF]" | tee -a log-install.txt
@@ -396,16 +393,8 @@ echo "   - XRAY  Vmess Grpc        : 999" | tee -a log-install.txt
 echo "   - XRAY  Vless Grpc        : 880" | tee -a log-install.txt
 echo "   - XRAY  Trojan Grpc       : 653" | tee -a log-install.txt
 fi
-
 echo "   - Trojan                  : 8443" | tee -a log-install.txt
 echo "   - Trojan Go               : 2096" | tee -a log-install.txt
-echo "   - Wireguard               : 7070" | tee -a log-install.txt
-echo "   - SSTP VPN                : 444" | tee -a log-install.txt
-echo "   - L2TP/IPSEC VPN          : 1701" | tee -a log-install.txt
-echo "   - PPTP VPN                : 1732" | tee -a log-install.txt
-echo "   - SS-OBFS TLS             : 2443-2543" | tee -a log-install.txt
-echo "   - SS-OBFS HTTP            : 3443-3543" | tee -a log-install.txt
-echo "   - Shadowsocks-R           : 1443-1543" | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "   >>> Server Information & Other Features"  | tee -a log-install.txt
 echo "   - Timezone                : Asia/Kuala_Lumpur (GMT +8)"  | tee -a log-install.txt
@@ -424,11 +413,8 @@ echo "   - Admin Control" | tee -a log-install.txt
 echo "   - Change port" | tee -a log-install.txt
 echo "   - Restore Data" | tee -a log-install.txt
 echo "   - Full Orders For Various Services" | tee -a log-install.txt
-echo ""
-echo ""
 echo "------------------------------------------------------------"
-echo ""
-echo "===============-[ Script Created By GH-Reyz ]-==============="
+echo "===============-[ Script Created By Reyz-V4 ]-==============="
 echo -e ""
 echo ""
 echo "" | tee -a log-install.txt
