@@ -30,6 +30,9 @@ CekOne=$(cat /usr/local/etc/.$Name.ini)
 cpu_usage1="$(ps aux | awk 'BEGIN {sum=0} {sum+=$3}; END {print sum}')"
 cpu_usage="$((${cpu_usage1/\.*/} / ${corediilik:-1}))"
 cpu_usage+=" %"
+uram=$(free -m | awk 'NR==2 {print $3}')
+fram=$(free -m | awk 'NR==2 {print $4}')
+uptime="$(uptime -p | cut -d " " -f 2-10)"
 
 #Download/Upload today
 dtoday="$(vnstat -i eth0 | grep "today" | awk '{print $2" "substr ($3, 1, 1)}')"
@@ -96,7 +99,7 @@ chck_b(){
 chck_b
 clear
 echo -e "\033[1;35m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "\E[0;47;30m|              ♦️ SCRIPT VPS INFO ♦️           |\E[0m"
+echo -e "\E[0;47;30m|              ♦️ SCRIPT VPS INFO ♦️             |\E[0m"
 echo -e "\033[1;35m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 uphours=`uptime -p | awk '{print $2,$3}' | cut -d , -f1`
 upminutes=`uptime -p | awk '{print $4,$5}' | cut -d , -f1`
@@ -112,7 +115,10 @@ fi
 echo -e "Use Core        :  $rekk"
 echo -e "Current Domain  :  $(cat /etc/$bec/domain)"
 echo -e "IP-VPS          :  $(cat /etc/myipvps)"
+echo -e "Used RAM        :  $uram MB"
+echo -e "Free RAM        :  $fram MB"
 echo -e "CPU Usage       :  $cpu_usage1 %"
+echo -e "System Uptime   :  $uptime"
 echo -e "Time Location   :  $WKT"
 echo -e "Date Location   :  $DATE"
 echo -e "\033[1;35m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
@@ -121,7 +127,7 @@ echo -e   " \e[0;32m Download\e[0m      $dtoday    $dyest       $dmon   \e[0m"
 echo -e   " \e[0;32m Upload\e[0m        $utoday    $uyest       $umon   \e[0m"
 echo -e   " \e[0;32m Total\e[0m       \033[0;36m  $ttoday    $tyest       $tmon  \e[0m "
 echo -e "\033[1;35m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "\E[0;47;30m|              ♦️ SCRIPT VPS MENU ♦️           |\E[0m"
+echo -e "\E[0;47;30m|              ♦️ SCRIPT VPS MENU ♦️             |\E[0m"
 echo -e "\033[1;35m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e " [\033[1;32m01\033[0m] • SSH & OVPN
  [\033[1;32m02\033[0m] • $rekk : VMess / VLess 
