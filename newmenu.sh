@@ -150,9 +150,9 @@ fi
 echo ""
 echo -e "\033[1;35m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 if [[ $(cat /opt/.ver) = $serverV ]] > /dev/null 2>&1; then
-echo -e "Client Name   : $Name"
-echo -e "Expiry script : $Exp"
-echo -e "Script By     : Reyz-V4"
+echo -e "  Client Name   : $Name"
+echo -e "  Expiry script : $Exp"
+echo -e "  Script By     : Reyz-V4"
 rm -f /home/needupdate > /dev/null 2>&1
 else
 rm /dev/.permiss > /dev/null 2>&1
