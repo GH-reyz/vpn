@@ -134,9 +134,9 @@ read -p "Expired (days): " masaaktif
 
 config=/root/.ctech/.kumbang/config
 
-echo "vless://${uuid}@${bug}.${domain}:${grvl}?mode=gun&security=tls&encryption=none&type=grpc&serviceName=GunService#reyzvpn@${user}" >$config
-echo "vless://${uuid}@${domain}:${grvl}?mode=gun&security=tls&encryption=none&type=grpc&serviceName=GunService&sni=${bug}#reyzvpn@${user}" >>$config
-echo "vless://${uuid}@${bug}.${domain}:${grvl}?mode=gun&security=tls&encryption=none&type=grpc&serviceName=GunService&sni=${bug}#reyzvpn@${user}" >>$config
+echo "vless://${uuid}@${bug}.${domain}:${grvl}?mode=gun&security=tls&encryption=none&type=grpc&serviceName=GunService#${user}" >$config
+echo "vless://${uuid}@${domain}:${grvl}?mode=gun&security=tls&encryption=none&type=grpc&serviceName=GunService&sni=${bug}#${user}" >>$config
+echo "vless://${uuid}@${bug}.${domain}:${grvl}?mode=gun&security=tls&encryption=none&type=grpc&serviceName=GunService&sni=${bug}#${user}" >>$config
 
 config=/root/.ctech/.kumbang/config
 add=$(sed -n '1 p' $config | cut -d' ' -f1)

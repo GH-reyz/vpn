@@ -134,9 +134,9 @@ read -p "Expired (days): " masaaktif
 
 config=/root/.ctech/.kumbang/config
 
-echo "trojan://${user}@${bug}.${domain}:${grtr}/?security=tls&type=grpc&serviceName=GunService#reyzvpn@${user}" >$config
-echo "trojan://${user}@${domain}:${grtr}/?security=tls&type=grpc&serviceName=GunService&sni=${bug}#reyzvpn@${user}" >>$config
-echo "trojan://${user}@${bug}.${domain}:${grtr}/?security=tls&type=grpc&serviceName=GunService&sni=${bug}#reyzvpn@${user}" >>$config
+echo "trojan://${user}@${bug}.${domain}:${grtr}/?security=tls&type=grpc&serviceName=GunService#${user}" >$config
+echo "trojan://${user}@${domain}:${grtr}/?security=tls&type=grpc&serviceName=GunService&sni=${bug}#${user}" >>$config
+echo "trojan://${user}@${bug}.${domain}:${grtr}/?security=tls&type=grpc&serviceName=GunService&sni=${bug}#${user}" >>$config
 
 config=/root/.ctech/.kumbang/config
 add=$(sed -n '1 p' $config | cut -d' ' -f1)
