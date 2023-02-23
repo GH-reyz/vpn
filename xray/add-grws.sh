@@ -106,7 +106,7 @@ sed -i '/#vmessgrpc$/a\### '"$user $exp"'\
 cat > /etc/xray/$user-tls.json << EOF
       {
       "v": "0",
-      "ps": "${user}",
+      "ps": "reyzvpn@${user}",
       "add": "${domain}",
       "port": "${grws}",
       "id": "${uuid}",
@@ -114,7 +114,7 @@ cat > /etc/xray/$user-tls.json << EOF
       "net": "grpc",
       "path": "GunService",
       "type": "none",
-      "host": "ctech.me",
+      "host": "reyzvpn.me",
       "tls": "tls"
 }
 EOF
