@@ -389,9 +389,9 @@ echo "   - XRAY  Vmess TLS         : 435" | tee -a log-install.txt
 echo "   - XRAY  Vmess None TLS    : 95" | tee -a log-install.txt
 echo "   - XRAY  Vless TLS         : 443" | tee -a log-install.txt
 echo "   - XRAY  Vless None TLS    : 80" | tee -a log-install.txt
-echo "   - XRAY  Vmess Grpc        : 999" | tee -a log-install.txt
-echo "   - XRAY  Vless Grpc        : 880" | tee -a log-install.txt
-echo "   - XRAY  Trojan Grpc       : 653" | tee -a log-install.txt
+echo "   - XRAY  Vmess Grpc        : 80" | tee -a log-install.txt
+echo "   - XRAY  Vless Grpc        : 443" | tee -a log-install.txt
+echo "   - XRAY  Trojan Grpc       : 443" | tee -a log-install.txt
 fi
 echo "   - Trojan                  : 8443" | tee -a log-install.txt
 echo "   - Trojan Go               : 2096" | tee -a log-install.txt
