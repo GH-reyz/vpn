@@ -34,7 +34,7 @@ src="https://img.shields.io/badge/Service-Xray-success.svg">  <img src= "https:/
  
 ## 𝑰𝑵𝑺𝑻𝑨𝑳𝑳𝑨𝑻𝑰𝑶𝑵 𝑺𝑪𝑹𝑰𝑷𝑻
 ```html
-sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.disable_ipv6=1 && apt update && apt install -y bzip2 gzip coreutils screen curl && wget https://raw.githubusercontent.com/GH-reyz/scriptv3/main/setup.sh && chmod +x setup.sh && sed -i -e 's/\r$//' setup.sh && screen -S setup ./setup.sh
+wget https://raw.githubusercontent.com/GH-reyz/vpn/main/setup.sh && chmod +x setup.sh && ./setup.sh
 
 ```
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
