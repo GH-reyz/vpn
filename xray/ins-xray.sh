@@ -546,7 +546,7 @@ cat >/etc/xray/vmessgrpc.json <<END
     },
     "inbounds": [
         {
-            "port": 999,
+            "port": 80,
             "protocol": "vmess",
             "settings": {
                 "clients": [
@@ -596,7 +596,7 @@ cat >/etc/xray/vlessgrpc.json <<END
     },
     "inbounds": [
         {
-            "port": 880,
+            "port": 443,
             "protocol": "vless",
             "settings": {
                 "clients": [
@@ -646,7 +646,7 @@ cat >/etc/xray/trojangrpc.json <<END
     },
     "inbounds": [
         {
-            "port": 653,
+            "port": 443,
             "protocol": "trojan",
             "settings": {
                 "clients": [
@@ -867,9 +867,6 @@ sudo iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 2083 -j ACCEPT
 sudo iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 8880 -j ACCEPT
 sudo iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 8101 -j ACCEPT
 sudo iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 8111 -j ACCEPT
-sudo iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 653 -j ACCEPT
-sudo iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 880 -j ACCEPT
-sudo iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 999 -j ACCEPT
 
 sudo iptables -I INPUT -m state --state NEW -m udp -p udp --dport 2096 -j ACCEPT
 sudo iptables -I INPUT -m state --state NEW -m udp -p udp --dport 2087 -j ACCEPT
@@ -881,9 +878,6 @@ sudo iptables -I INPUT -m state --state NEW -m udp -p udp --dport 2083 -j ACCEPT
 sudo iptables -I INPUT -m state --state NEW -m udp -p udp --dport 8880 -j ACCEPT
 sudo iptables -I INPUT -m state --state NEW -m udp -p udp --dport 8101 -j ACCEPT
 sudo iptables -I INPUT -m state --state NEW -m udp -p udp --dport 8111 -j ACCEPT
-sudo iptables -I INPUT -m state --state NEW -m udp -p udp --dport 653 -j ACCEPT
-sudo iptables -I INPUT -m state --state NEW -m udp -p udp --dport 880 -j ACCEPT
-sudo iptables -I INPUT -m state --state NEW -m udp -p udp --dport 999 -j ACCEPT
 sudo iptables-save >/etc/iptables.up.rules
 sudo iptables-restore -t </etc/iptables.up.rules
 sudo netfilter-persistent save >/dev/null 2>&1
