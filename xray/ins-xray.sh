@@ -237,7 +237,7 @@ cat >/etc/xray/config.json <<END
       }
     },
     {
-      "port": 445,
+      "port": 443,
       "protocol": "vless",
       "settings": {
         "clients": [
@@ -859,7 +859,7 @@ rm /usr/bin/bbr >/dev/null 2>&1
 
 sudo iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 2096 -j ACCEPT
 sudo iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 2087 -j ACCEPT
-sudo iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 445 -j ACCEPT
+sudo iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 443 -j ACCEPT
 sudo iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 435 -j ACCEPT
 sudo iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 80 -j ACCEPT
 sudo iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 95 -j ACCEPT
@@ -873,7 +873,7 @@ sudo iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 999 -j ACCEPT
 
 sudo iptables -I INPUT -m state --state NEW -m udp -p udp --dport 2096 -j ACCEPT
 sudo iptables -I INPUT -m state --state NEW -m udp -p udp --dport 2087 -j ACCEPT
-sudo iptables -I INPUT -m state --state NEW -m udp -p udp --dport 445 -j ACCEPT
+sudo iptables -I INPUT -m state --state NEW -m udp -p udp --dport 443 -j ACCEPT
 sudo iptables -I INPUT -m state --state NEW -m udp -p udp --dport 435 -j ACCEPT
 sudo iptables -I INPUT -m state --state NEW -m udp -p udp --dport 80 -j ACCEPT
 sudo iptables -I INPUT -m state --state NEW -m udp -p udp --dport 95 -j ACCEPT
