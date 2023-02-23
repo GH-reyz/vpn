@@ -362,7 +362,7 @@ gg="AM"
 fi
 curl -sS ifconfig.me > /etc/myipvps
 echo " "
-echo "====================-[ ReyzVPN Premium ]-===================="
+echo "====================-[♦️ReyzVPN Premium♦️]-===================="
 echo "------------------------------------------------------------"
 echo "   >>> Service & Port"  | tee -a log-install.txt
 echo "   - OpenSSH                 : 22"  | tee -a log-install.txt
@@ -385,14 +385,16 @@ echo "   - V2RAY Vmess None TLS    : 95" | tee -a log-install.txt
 echo "   - V2RAY Vless TLS         : 443" | tee -a log-install.txt
 echo "   - V2RAY Vless None TLS    : 80" | tee -a log-install.txt
 elif [ "$coreselect" = "xray" ]; then
-echo "   - XRAY  Vmess TLS         : 435" | tee -a log-install.txt
-echo "   - XRAY  Vmess None TLS    : 95" | tee -a log-install.txt
+echo "------------------------------------------------------------"
 echo "   - XRAY  Vless TLS         : 443" | tee -a log-install.txt
 echo "   - XRAY  Vless None TLS    : 80" | tee -a log-install.txt
-echo "   - XRAY  Vmess Grpc        : 80" | tee -a log-install.txt
-echo "   - XRAY  Vless Grpc        : 443" | tee -a log-install.txt
-echo "   - XRAY  Trojan Grpc       : 443" | tee -a log-install.txt
+echo "   - XRAY  Vmess GRPC        : 80" | tee -a log-install.txt
+echo "   - XRAY  Vless GRPC        : 443" | tee -a log-install.txt
+echo "   - XRAY  Trojan GRPC       : 443" | tee -a log-install.txt
 fi
+echo "------------------------------------------------------------"
+echo "   - XRAY  Vmess TLS         : 435" | tee -a log-install.txt
+echo "   - XRAY  Vmess None TLS    : 95" | tee -a log-install.txt
 echo "   - Trojan                  : 8443" | tee -a log-install.txt
 echo "   - Trojan Go               : 2096" | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
@@ -414,7 +416,7 @@ echo "   - Change port" | tee -a log-install.txt
 echo "   - Restore Data" | tee -a log-install.txt
 echo "   - Full Orders For Various Services" | tee -a log-install.txt
 echo "------------------------------------------------------------"
-echo "===============-[ Script Created By Reyz-V4 ]-==============="
+echo "===============-[🔰Script Created By Reyz-V4🔰]-==============="
 echo -e ""
 echo ""
 echo "" | tee -a log-install.txt
