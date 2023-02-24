@@ -180,8 +180,8 @@ x="ok"
 while true $x != "ok"
 do
 echo -e "[ ${green}INFO${NC} ] Select core : " 
-echo -e "[ ${yell}*${NC} ] 1. V2RAY"
-echo -e "[ ${yell}*${NC} ] 2. XRAY"
+echo -e "[ ${yell}*${NC} ] 1. V2RAY ( Error ❌ )"
+echo -e "[ ${yell}*${NC} ] 2. XRAY ( Running ✓ )"
 echo " =--------------="
 echo -ne "[ ${red}#${NC} ] Choice : "; read x
 case "$x" in
@@ -193,7 +193,7 @@ case "$x" in
    ;;
    2)
    coreselect="xray"
-   green "XRAY Selected"
+   green "XRAY Selected ✓"
    sleep 3
    break
    ;;
@@ -362,7 +362,7 @@ gg="AM"
 fi
 curl -sS ifconfig.me > /etc/myipvps
 echo " "
-echo "====================-[ ReyzVPN Premium ]-===================="
+echo "====================-[♦️ReyzVPN Premium♦️]-===================="
 echo "------------------------------------------------------------"
 echo "    🔰INFORMASI SSH & OVPN 🔰"  | tee -a log-install.txt
 echo "------------------------------------------------------------"
@@ -423,7 +423,7 @@ echo "   - Change port" | tee -a log-install.txt
 echo "   - Restore Data" | tee -a log-install.txt
 echo "   - Full Orders For Various Services" | tee -a log-install.txt
 echo "------------------------------------------------------------"
-echo "===============-[ Script Created By Reyz-V4 ]-==============="
+echo "===============-[♦️Script Created By Reyz-V4♦️]-==============="
 echo -e ""
 echo ""
 echo "" | tee -a log-install.txt
