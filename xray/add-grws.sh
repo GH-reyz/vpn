@@ -74,7 +74,7 @@ else
 domain=$IP
 fi
 
-grws="$(cat /root/log-install.txt | grep -w "XRAY  Vmess Grpc" | cut -d: -f2|sed 's/ //g')"
+grws="$(cat /root/log-install.txt | grep -w "XRAY  Vmess GRPC" | cut -d: -f2|sed 's/ //g')"
 until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "\E[44;1;39m       ⇱ Add Vmess GRPC ⇲          \E[0m"
@@ -106,7 +106,7 @@ sed -i '/#vmessgrpc$/a\### '"$user $exp"'\
 cat > /etc/xray/$user-tls.json << EOF
       {
       "v": "0",
-      "ps": "reyzvpn@${user}",
+      "ps": "${user}",
       "add": "${domain}",
       "port": "${grws}",
       "id": "${uuid}",
@@ -114,7 +114,7 @@ cat > /etc/xray/$user-tls.json << EOF
       "net": "grpc",
       "path": "GunService",
       "type": "none",
-      "host": "reyzvpn.me",
+      "host": "ctech.me",
       "tls": "tls"
 }
 EOF
