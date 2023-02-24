@@ -179,9 +179,9 @@ echo "IP=" >> /var/lib/scrz-prem/ipvps.conf
 x="ok"
 while true $x != "ok"
 do
-echo -e "[ ${green}INFO${NC} ] Pilih Core : " 
-echo -e "[ ${yell}*${NC} ] 1. V2RAY ( Error ❌ )"
-echo -e "[ ${yell}*${NC} ] 2. XRAY (Recommend ✓ )"
+echo -e "[ ${green}INFO${NC} ] Select core : " 
+echo -e "[ ${yell}*${NC} ] 1. V2RAY"
+echo -e "[ ${yell}*${NC} ] 2. XRAY"
 echo " =--------------="
 echo -ne "[ ${red}#${NC} ] Choice : "; read x
 case "$x" in
@@ -193,7 +193,7 @@ case "$x" in
    ;;
    2)
    coreselect="xray"
-   green "XRAY DIPILIH 🔰"
+   green "XRAY Selected"
    sleep 3
    break
    ;;
@@ -257,7 +257,7 @@ else
 clear
 yellow "Add Domain for vmess/vless/trojan dll"
 echo " "
-read -rp "Masukkan domain : " -e pp
+read -rp "Input ur domain : " -e pp
     if [ -z $pp ]; then
         echo -e "
         Nothing input for domain!
@@ -362,9 +362,9 @@ gg="AM"
 fi
 curl -sS ifconfig.me > /etc/myipvps
 echo " "
-echo "====================-[♦️ReyzVPN Premium♦️]-===================="
+echo "====================-[ ReyzVPN Premium ]-===================="
 echo "------------------------------------------------------------"
-echo "    🔰INFORMASI SSHWS & OVPN🔰"  | tee -a log-install.txt
+echo "    🔰INFORMASI SSH & OVPN 🔰"  | tee -a log-install.txt
 echo "------------------------------------------------------------"
 echo "   >>> Service & Port"  | tee -a log-install.txt
 echo "   - OpenSSH                 : 22"  | tee -a log-install.txt
@@ -379,8 +379,9 @@ echo "   - Dropbear                : 109, 143" | tee -a log-install.txt
 echo "   - Squid Proxy             : 3128, 8080" | tee -a log-install.txt
 echo "   - Badvpn                  : 7100-7900" | tee -a log-install.txt
 echo "   - Nginx                   : 81" | tee -a log-install.txt
+echo "   - VLess TCP XTLS          : 212" | tee -a log-install.txt
 if [ "$coreselect" = "v2ray" ]; then
-echo "   - V2RAY Vmess Grpc        : 2099" | tee -a log-install.txt
+echo "   - V2RAY Vmess GRPC        : 2099" | tee -a log-install.txt
 echo "   - V2RAY Vmess TLS         : 435" | tee -a log-install.txt
 echo "   - V2RAY Vmess None TLS    : 95" | tee -a log-install.txt
 echo "   - V2RAY Vless TLS         : 443" | tee -a log-install.txt
@@ -391,7 +392,7 @@ echo "    🔰INFORMASI XRAY Fake Multi🔰"  | tee -a log-install.txt
 echo "------------------------------------------------------------"
 echo "   - XRAY  Vless TLS         : 443" | tee -a log-install.txt
 echo "   - XRAY  Vless None TLS    : 80" | tee -a log-install.txt
-echo "   - XRAY  Vmess Grpc        : 80" | tee -a log-install.txt
+echo "   - XRAY  Vmess GRPC        : 80" | tee -a log-install.txt
 echo "   - XRAY  Vless Grpc        : 443" | tee -a log-install.txt
 echo "   - XRAY  Trojan Grpc       : 443" | tee -a log-install.txt
 fi
@@ -422,7 +423,7 @@ echo "   - Change port" | tee -a log-install.txt
 echo "   - Restore Data" | tee -a log-install.txt
 echo "   - Full Orders For Various Services" | tee -a log-install.txt
 echo "------------------------------------------------------------"
-echo "===============-[♦️Script Created By Reyz-V4♦️]-==============="
+echo "===============-[ Script Created By Reyz-V4 ]-==============="
 echo -e ""
 echo ""
 echo "" | tee -a log-install.txt
